@@ -153,8 +153,8 @@ public class SwiftCloudKitPlugin: NSObject, FlutterPlugin {
                     .toDictionary())
 
                 }
+                 result(CloudKitResponse(success: true, error: nil, data: nil).toDictionary())
               }
-
             }
 
           })
