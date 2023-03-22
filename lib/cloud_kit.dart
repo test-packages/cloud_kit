@@ -27,6 +27,9 @@ class CloudKit {
         Map<String, dynamic>.from(await _channel.invokeMethod('check', {}));
 
     final response = SwiftResponse.fromMap(map);
+    if (!response.success) {
+      throw PlatformException(code: response.error ?? "");
+    }
 
     if (!response.success) {
       throw Exception(response.error);
