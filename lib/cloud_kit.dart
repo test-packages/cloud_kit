@@ -31,10 +31,6 @@ class CloudKit {
       throw PlatformException(code: response.error ?? "");
     }
 
-    if (!response.success) {
-      throw Exception(response.error);
-    }
-
     return response.success;
   }
 
